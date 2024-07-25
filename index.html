@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sana Anwar</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/lightbox/css/lightbox.css" rel="stylesheet">
+    <link href="assets/textrotator/simpletextrotator.css" rel="stylesheet">
+    <link href="assets/flexslider/flexslider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: url('img/header-bg.jpg') no-repeat center center;
+            background-size: cover;
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .inner {
+            text-align: center;
+            margin: 0 auto;
+        }
+        .milestones {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .milestone-item {
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            box-sizing: border-box;
+            margin: 20px;
+        }
+        @media (max-width: 768px) {
+            .milestone-item {
+                flex: 1 1 calc(50% - 40px);
+                max-width: calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .milestone-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+        .icon {
+            font-size: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            margin: 0 auto 20px;
+        }
+        .social-buttons .social-btn {
+            font-size: 48px;
+            margin: 0 10px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: #333;
+            color: white;
+        }
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .centered-text h1 {
+            font-size: 100px;
+            color: white;
+        }
+        .centered-text p {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 200px; /* Adjust this value to add more space */
+        }
+        .features, .contact-wrap {
+            margin-bottom: 0; /* Remove extra margin if present */
+        }
+        .contact-wrap {
+            padding-top: 0; /* Remove extra padding at the top of the contact section */
+        }
+        .features {
+            padding-bottom: 0; /* Remove extra padding at the bottom of the features section */
+        }
+    </style>
+</head>
+<body id="top">
+    <div id="preloader"></div>
+    <header id="home">
+        <div class="container-fluid">
+            <div class="row"></div>
+        </div>
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="centered-text">
+                    <h1 class="animated fadeInDown">SANA ANWAR</h1>
+                    <p class="animated fadeInDown">ASPIRING AI ENGINEER</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <a href="#about" class="scrollto wow fadeInUp delay-5s">
+                            <p>SEE MORE</p>
+                            <p class="scrollto--arrow"><img src="img/scroll-down.png" alt="scroll down arrow"></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="intro text-center section-padding color-bg" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 wp1">
+                    <h1 class="arrow">ABOUT ME</h1>
+                    <p>Hi there! I am a Computer Sciences Honors Scholar at the New Jersey Institute of Technology. I recently graduated from the Academy of Healthcare Sciences at the Morris County School of Technology, now aiming to contribute towards the healthcare industry through AI engineering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features text-center section-padding" id="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="arrow">CURRENT EXPERIENCES</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="milestones">
+                    <div class="milestone-item wp2 item">
+                        <div class="icon">💻</div>
+                        <h1><b>HEADSTARTER</b></h1>
+                        <h2>SOFTWARE ENGINEER FELLOW</h2>
+                        <p>Represented my country in a US-government funded foreign exchange program, hosted by Virginia Tech University.</p>
+                    </div>
+                    <div class="milestone-item wp2 item delay-05s">
+                        <div class="icon">🔎</div>
+                        <h1><b>NJIT</b></h1>
+                        <h2>UNDERGRADUATE RESEARCHER</h2>
+                        <p>Conducting research on designing emerging AI technologies to support aging populations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center section-padding contact-wrap" id="contact">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="arrow">GET IN TOUCH</h1>
+            </div>
+        </div>
+        <div class="row contact-details">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="social-buttons">
+                        <li><a href="https://github.com/sanaanwarrr" class="social-btn"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/sanaanwarrr/" class="social-btn"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>© 2024 Sana Anwar</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="assets/flexslider/jquery.flexslider.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
+    <script src="assets/lightbox/js/lightbox.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+    $(".rotate").textrotator({
+      animation: "fade",
+      separator: ",",
+      speed: 2000
+    });
+    </script>
+</body>
+</html>
