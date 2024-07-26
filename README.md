@@ -1,11 +1,2 @@
-# JohnDoe
-A Responsive Free One Page Portfolio Website template
-
-
-
-
-# landingpage
-# landingpage
-# landingpage
-# landingpage
-# website
+# Sana Anwar
+Welcome to my personal page! Inspiration taken from freelance webdesigner John Doe for the formatting of this site.
