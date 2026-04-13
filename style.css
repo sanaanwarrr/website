@@ -1,0 +1,102 @@
+:root {
+    --bg: #e2e2e2; 
+    --text: #1a1a1a;
+    --card-bg: rgba(0,0,0,0.03); 
+    --border: rgba(0,0,0,0.1); 
+    --tag-bg: #e0ddd5;
+    --highlight: rgba(43, 156, 174, 0.1);
+    --bny-blue: #2b9cae;
+}
+
+[data-theme="dark"] {
+    --bg: #1a1a1a; --text: #efede6;
+    --card-bg: #242424; --border: rgba(255,255,255,0.1); --tag-bg: #333;
+    --highlight: rgba(255,255,255,0.05);
+}
+
+body {
+    background-color: var(--bg); color: var(--text);
+    transition: background 0.5s ease, color 0.5s ease;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    margin: 0;
+}
+
+.brand-bold { font-weight: 700; }
+
+.grain-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.1; pointer-events: none; z-index: 100;
+}
+
+.theme-icon-btn {
+    position: fixed; top: 30px; right: 30px;
+    background: none; border: none; color: var(--text);
+    cursor: pointer; z-index: 101; padding: 10px;
+}
+
+/* Theme Icon Toggle Logic: Show Sun in Dark, Moon in Light */
+[data-theme="dark"] .moon-icon { display: none; }
+[data-theme="dark"] .sun-icon { display: block; }
+[data-theme="light"] .sun-icon { display: none; }
+[data-theme="light"] .moon-icon { display: block; }
+
+.main-layout {
+    display: grid; grid-template-columns: 1fr 1.5fr;
+    max-width: 1200px; margin: 0 auto;
+    gap: 80px; padding: 100px 40px; align-items: flex-start;
+}
+
+.photo-area { display: flex; flex-direction: column; align-items: center; position: sticky; top: 100px; }
+.bio-left { text-align: center; margin-top: 20px; width: 100%; }
+
+.name-serif, .serif-heading { 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    font-weight: 700; font-size: 3rem; margin: 0 0 10px 0; 
+}
+.serif-heading { font-size: 2.5rem; }
+
+.tech-mono {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem; background-color: var(--highlight);
+    padding: 2px 6px; border-radius: 4px; margin: 4px 0; display: inline-block;
+}
+
+.social-links { margin-top: 15px; display: flex; justify-content: center; gap: 15px; }
+.social-links a { color: var(--text); opacity: 0.6; transition: 0.3s; }
+.social-links a:hover { color: var(--bny-blue); opacity: 1; transform: translateY(-2px); }
+
+.image-sticky-wrapper { width: 100%; max-width: 300px; position: relative; margin-bottom: 20px; }
+.headshot { width: 100%; filter: grayscale(100%); border-radius: 4px; display: block; }
+
+.tab-switcher { border-bottom: 1px solid var(--border); margin-bottom: 25px; }
+.tab-link { background: none; border: none; color: var(--text); padding: 10px 20px; cursor: pointer; opacity: 0.4; font-weight: 600; transition: 0.3s; }
+.tab-link.active { opacity: 1; border-bottom: 2px solid var(--bny-blue); }
+
+.accordion-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 15px; overflow: hidden; }
+.accordion-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+
+/* Spacing fix: tight heading to subtitle */
+.header-info h3 { margin: 0; font-size: 1.1rem; }
+.header-info p { margin: 2px 0 0 0; opacity: 0.7; font-size: 0.9rem; }
+.header-main { display: flex; gap: 15px; align-items: center; }
+
+.company-logo { width: 48px; height: 48px; border-radius: 8px; object-fit: contain; }
+.header-meta { display: flex; align-items: center; gap: 20px; }
+.meta-text { display: flex; flex-direction: column; text-align: right; gap: 2px; }
+.location-line { font-size: 0.75rem; opacity: 0.6; text-transform: uppercase; }
+.date-line { font-size: 0.85rem; font-weight: 600; }
+.arrow-icon { font-size: 1.2rem; transition: 0.4s; line-height: 1; }
+
+.category-content { display: none; opacity: 0; transform: translateY(10px); transition: 0.4s ease; }
+.category-content.active { display: block; opacity: 1; transform: translateY(0); }
+
+.accordion-item.open .arrow-icon { transform: rotate(180deg); color: var(--bny-blue); }
+.accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.accordion-item.open .accordion-body { max-height: 500px; }
+.body-inner { padding: 0 20px 20px 83px; opacity: 0.9; font-size: 0.95rem; line-height: 1.6; }
+
+.tag-row { margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
+.tag { background: var(--tag-bg); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; }
+
+@media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; padding: 60px 20px; text-align: center; } .photo-area { position: relative; top: 0; margin-bottom: 40px; } .body-inner { padding-left: 20px; } .social-links { justify-content: center; } }

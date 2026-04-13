@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sana Anwar</title>
+    <link rel="icon" type="image/png" href="images/pearl.png?v=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <button id="theme-toggle" class="theme-icon-btn" aria-label="Toggle Mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+
+    <main class="main-layout">
+        <section class="photo-area">
+            <div class="image-sticky-wrapper">
+                <img src="images/headshot-2.png" alt="Sana Anwar" class="headshot">
+            </div>
+
+            <div class="bio-left">
+                <h1 class="name-serif">sana anwar</h1>
+                <p class="tech-mono">CS & Finance @ <span class="brand-bold">NJIT Honors</span></p>                
+                    <a href="https://github.com/sanaanwarrr" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                    <a href="https://linkedin.com/in/sanaanwarrr" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-side">
+            <div class="tabs-area">
+                <h2 class="serif-heading">what i've done</h2>
+                <div class="tab-switcher">
+                    <button class="tab-link active" onclick="switchCategory('experience')">experience</button>
+                    <button class="tab-link" onclick="switchCategory('extra')">extracurriculars</button>
+                </div>
+
+                <div class="tab-content-wrapper">
+                    <div id="experience" class="category-content active">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <div class="header-main">
+                                    <img src="images/bny.png" class="company-logo" alt="BNY">
+                                    <div class="header-info"><h3>BNY</h3><p>Engineering Pre-Intern</p></div>
+                                </div>
+                                <div class="header-meta"><div class="meta-text"><span class="date-line">05/2026</span><span class="location-line">NYC</span></div><span class="arrow-icon">⌄</span></div>
+                            </div>
+                            <div class="accordion-body"><div class="body-inner"><p>incoming!</p></div></div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <div class="header-main">
+                                    <img src="images/njit.jpeg" class="company-logo" alt="NJIT">
+                                    <div class="header-info"><h3>NJIT</h3><p>NLP/LLM Research Assistant</p></div>
+                                </div>
+                                <div class="header-meta"><div class="meta-text"><span class="date-line">01/2026 - Present</span><span class="location-line">Newark, NJ</span></div><span class="arrow-icon">⌄</span></div>
+                            </div>
+                            <div class="accordion-body"><div class="body-inner"><p>front-end & NLP</p><p>honors summer research institute. developing conversational interfaces to reduce AI overreliance in education.</p><div class="tag-row"><span class="tag">StreamLit</span><span class="tag">Firebase</span><span class="tag">Firestore</span></div></div></div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <div class="header-main">
+                                    <img src="images/innovatix.jpeg" class="company-logo" alt="Innovatix">
+                                    <div class="header-info"><h3>Innovatix</h3><p>AI Architect Intern</p></div>
+                                </div>
+                                <div class="header-meta"><div class="meta-text"><span class="date-line">05/2025 - Present</span><span class="location-line">Bedminster, NJ</span></div><span class="arrow-icon">⌄</span></div>
+                            </div>
+                            <div class="accordion-body"><div class="body-inner"><p>backend</p><p>CRM analytics. deploying API integrations for teleconsulting ICPs.</p><div class="tag-row"><span class="tag">MCP</span><span class="tag">Firecrawl</span><span class="tag">LangGraph</span></div></div></div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <div class="header-main">
+                                    <img src="images/hiyllo.png" class="company-logo" alt="Hiyllo">
+                                    <div class="header-info"><h3>Hiyllo</h3><p>Software Engineer Intern</p></div>
+                                </div>
+                                <div class="header-meta"><div class="meta-text"><span class="date-line">01/2025 - 05/2025</span><span class="location-line">Princeton, NJ</span></div><span class="arrow-icon">⌄</span></div>
+                            </div>
+                            <div class="accordion-body"><div class="body-inner"><p>front-end</p><p>quality assurance. debugged productivity features in production.</p><div class="tag-row"><span class="tag">Playwright</span><span class="tag">JavaScript</span></div></div></div>
+                        </div>
+                    </div>
+
+                    <div id="extra" class="category-content">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <div class="header-main">
+                                    <img src="images/njit.jpeg" class="company-logo" alt="NJIT">
+                                    <div class="header-info"><h3>Dean's Council</h3><p>VP of Internal Communications</p></div>
+                                </div>
+                                <div class="header-meta"><div class="meta-text"><span class="date-line">09/2026 - Present</span><span class="location-line">Newark, NJ</span></div><span class="arrow-icon">⌄</span></div>
+                            </div>
+                            <div class="accordion-body"><div class="body-inner"><p>incoming!</p></div></div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <div class="header-main">
+                                    <img src="images/salesforce.png" class="company-logo" alt="Salesforce">
+                                    <div class="header-info"><h3>Salesforce @ NJIT</h3><p>Secretary</p></div>
+                                </div>
+                                <div class="header-meta"><div class="meta-text"><span class="date-line">09/2025 - Present</span><span class="location-line">Newark, NJ</span></div><span class="arrow-icon">⌄</span></div>
+                            </div>
+                            <div class="accordion-body"><div class="body-inner"><p>incoming president. getting students certified in CRM analytics</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
